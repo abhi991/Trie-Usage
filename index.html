@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/graphicloads/100-flat/256/phonebook-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="Trie.js"></script>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-5/256/Autocomplete-icon.png" width="110" height="75"
+            class="d-inline-block align-top" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          </button>
+          <form class="d-flex">
+            <p>Phonebook Directory</p>
+          </form>
+        </div>
+      </nav>
+    <!-- <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: black;">
+
+        
+        
+    </nav> -->
+    <div id="container">
+        <div class="text_box" style="display: flex">
+            <form autocomplete="off" style="margin: auto">
+                <h5>Type in the box below...</h5>
+                <br>
+                <div class="autocomplete" style="width:350px;">
+                    <input id="myInput" type="text" placeholder="Search Number...">
+                    <!--<a class="ks-items autocomplete-items" id="list"></a>-->
+                </div>
+                <input type="submit" value="Cancel">
+            </form>
+        </div>
+        
+        <div class="text_box" style="overflow-y: scroll">
+            
+        <span>Status..</span>
+        <br>
+        <br>
+            <span id="info">
+            </span>
+        </div>
+    </div>
+    <div class="center_input">
+        <input type="text" placeholder="Enter contact name, number" id="contact_input">
+        <button class="btn btn-success" id="add">Add Contact</button>
+    </div>
+    <div class="center_input">
+        <input type="text" placeholder="Enter contact number" id="delete_input">
+        <button class="btn btn-danger" id="del">Delete Contact</button>
+    </div>
+    <template>
+        <div class="list-group-item list-group-item-action" style="display: inline-flex">
+            <span class="ks-avatar" style="align-content: center">
+                <img src="./person.png" id="Image" style="margin: 10px; height: 40px; width: 40px">
+            </span>
+            <div>
+                <span id="Name">Eric George</span>
+                <br>
+                <span id="Number">just now</span>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
